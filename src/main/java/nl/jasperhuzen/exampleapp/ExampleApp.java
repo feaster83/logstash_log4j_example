@@ -10,6 +10,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 public class ExampleApp {
 
+    static {
+        System.setProperty("logging.config", "log4j.properties");
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(ExampleApp.class, args);
     }
