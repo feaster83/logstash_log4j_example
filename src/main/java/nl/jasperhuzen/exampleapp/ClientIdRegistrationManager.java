@@ -8,12 +8,12 @@ import javax.annotation.PostConstruct;
 
 @Component
 @SuppressWarnings("unused")
-public class ConfigureClientIDToMDC {
+public class ClientIdRegistrationManager {
     @Autowired
-    private Config config;
+    private AppConfig appConfig;
 
     @PostConstruct
     private void configureMDC() {
-        MDC.put("client-id", config.getSystemUser() + "@" + config.getLocalhostName());
+        MDC.put("client-id", appConfig.getSystemUser() + "@" + appConfig.getLocalhostName());
     }
 }

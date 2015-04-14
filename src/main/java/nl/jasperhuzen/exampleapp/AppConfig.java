@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 
 @Getter
 @Component
-public class Config {
+public class AppConfig {
 
     @Value("#{environment.USER}")
     private String systemUser;
